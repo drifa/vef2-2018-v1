@@ -1,0 +1,20 @@
+<%
+  dateConverter = function(dateString) {
+    var date = new Date();
+
+    var day = date.getDay();
+    var month = date.getMonth()+1;
+    var year = date.getFullYear();
+
+    return day+"."+month+"."+year;
+  }
+
+  noImage = function(image) {
+    var onErrorImage = "http://esdpa.org/wp-content/themes/easymag/images/no-image.png";
+    if (typeof articles[i].attributes.image == 'undefined') {
+      return onErrorImage;
+    } else {
+      return image;
+    }
+  }
+%>

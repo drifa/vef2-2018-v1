@@ -1,0 +1,22 @@
+<%- include('header'); %>
+<% include functions %>
+<div id="container">
+  <% for (var i = 0; i<articles.length; i++) { %>
+    <div class="card">
+      <img src="<%= noImage(articles[i].attributes.image) %>" alt="">
+      <div class="middle">
+        <div class="middle-text">
+          <a href= '<%= "/articles/" + articles[i].attributes.slug %>' id="linkToArticle">Lesa</a>
+        </div>
+      </div>
+      <div class="card-text">
+        <h2>
+           <%= articles[i].attributes.title %>
+        </h2>
+        <h3><%= dateConverter(articles[i].attributes.date) %></h3>
+      </div>
+    </div>
+  <% } %>
+</div>
+
+<%- include('footer'); %>

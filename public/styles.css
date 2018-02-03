@@ -3,10 +3,249 @@
   padding: 0;
 }
 
+/*--------------*/
+/*   HEADER     */
+/*--------------*/
+
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 50%;
+  padding: 0;
+  margin: 0;
+
+  background: url("https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-0.3.5&s=379a34f5341188569401ea0d89349dab&auto=format&fit=crop&w=1500&q=80") no-repeat top center fixed;
+  background-size: cover;
+  background-origin: content-box, padding-box;
+  background-position: center;
+}
+
+#header {
+
+}
+
+#text-section {
+  background-color: #eee;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.75vmax;
+  width: 100%;
+  height: 400px;
+  padding-top: calc(200px - 3.75vmax);
+}
+
+/* ---------------- */
+/*      INDEX       */
+/* ---------------- */
+
+#container {
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  -webkit-transition-property: opacity; /* Safari */
+  -webkit-transition-duration: 1s; /* Safari */
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+#container .card {
+  align-self: flex-start;
+  align-items: flex-start;
+  align-content: space-around;
+  flex: 0 0 45%;
+}
+
+.card:hover {
+  opacity: 0.7;
+}
+
+.card-text {
+  height: 10%;
+  width: 60%;
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.card-text h3 {
+  padding-top: 5px;
+  font-family: 'Lora', serif;
+}
+
+.card img {
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transition: .5s ease-out;
+  opacity: 0;
+  text-align: center;
+}
+
+.card:hover .middle {
+  opacity: 1;
+}
+
+.middle-text {
+  background-color: #c3c3c3;
+  opacity: 0.8;
+  color: #aeaeae;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#linkToArticle:link, #linkToArticle:visited {
+    background-color: #eee;
+    color: #aeaeae;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#linkToArticle:hover, #linkToArticle:active {
+    background-color: #c3c3c3;
+    transition: all 0.8s ease-out;
+}
+
+/*---------------*/
+/*   ARTICLE     */
+/*---------------*/
+
+.body {
+  padding-top: 30px;
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-bottom: 20%;
+  text-align: left;
+}
+
+.body img {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.body p {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.textBody h1,
+.textBody h2,
+.textBody h3{
+  font-family: 'Roboto', serif;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.textBody h2 {
+  font-size: 32px;
+}
+
+.textBody h3 {
+  font-size: 24px;
+}
+
+.textBody p {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+}
+
+#backToFrontPageDiv {
+  margin-top: 40px;
+}
+
+#backToFrontPage {
+  padding: 20px;
+}
+
+#backToFrontPage:link, #backToFrontPage:visited {
+    background-color: #aeaeae;
+    color: #eee;
+    padding: 12px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#backToFrontPage:hover, #backToFrontPage:active {
+    background-color: #cecece;
+}
+
+
+/*---------------*/
+/*   NOTFOUND    */
+/*---------------*/
+
+
+.notFoundText h1,
+.notFoundText h2,
+.notFoundText h3 {
+  font-family: 'Lora', serif;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.notFoundText h2 {
+  font-size: 32px;
+}
+
+.notFoundText h3 {
+  font-size: 24px;
+}
+
+.notFoundTextDiv {
+  padding-bottom: 20%;
+  padding-top: 30px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  #container {
+    display: block;
+  }
 }

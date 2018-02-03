@@ -3,14 +3,20 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start": "node app.js",
     "eslint": "eslint *.js **/*.js"
   },
   "devDependencies": {
-    "eslint": "^4.16.0",
+    "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-google": "^0.9.1",
     "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "async": "^2.6.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "front-matter": "^2.3.0",
+    "showdown": "^1.8.6"
   }
 }
