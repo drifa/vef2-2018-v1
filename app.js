@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 app.get('/articles/:article', (req, res) => {
   articles.markdown(res, (frontMatterArr) => {
-    const foundArticle = frontMatterArr.find(article => article.attributes.slug === req.params.articles); // eslint-disable-line max-len
+    const foundArticle = frontMatterArr.find(article => article.attributes.slug === req.params.article); // eslint-disable-line max-len
     const converter = new sd.Converter();
     const text = foundArticle.body;
     const html = converter.makeHtml(text);
